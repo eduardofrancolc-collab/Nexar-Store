@@ -1,190 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexarStore — Tecnologia Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexar Tech - Sua Loja Premium de Tecnologia</title>
     <style>
-        :root {
-            --preto: #000000;
-            --verde: #00C47A;
-            --branco: #ffffff;
-            --cinza-escuro: #0d0d0d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
         body {
-            background: var(--preto);
-            color: var(--branco);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
         }
 
         header {
-            background: var(--cinza-escuro);
-            padding: 25px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--verde);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff6a;
         }
 
         header h1 {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--verde);
-            letter-spacing: 1px;
+            margin: 0;
+            font-size: 2.5rem;
+            color: #00ff6a;
         }
 
-        nav a {
-            margin-left: 24px;
-            color: var(--branco);
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--verde);
-        }
-
-        /* HERO COM IMAGEM DO GITHUB RAW */
         .hero {
             background-image: url("https://raw.githubusercontent.com/eduardofrancolc-collab/Nexar-Store/main/loja%20imag.png");
             background-size: cover;
-            background-position: center;
+            background-position: top center;
+            background-repeat: no-repeat;
+            position: relative;
             text-align: center;
             padding: 80px 20px;
         }
 
-        .hero h2 {
-            font-size: 38px;
-            font-weight: 800;
+        .hero img {
+            width: 330px;
+            animation: float 3s ease-in-out infinite;
         }
 
-        .hero p {
-            margin-top: 10px;
-            font-size: 18px;
-            opacity: 0.8;
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
 
-        .btn {
-            background: var(--verde);
-            padding: 15px 28px;
-            display: inline-block;
-            border-radius: 12px;
-            color: #000;
-            font-weight: 900;
-            margin-top: 22px;
-            text-decoration: none;
-            font-size: 18px;
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        .section-title {
-            padding: 50px 20px 10px;
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--verde);
+        h2 {
+            color: #00ff6a;
+            border-left: 5px solid #00ff6a;
+            padding-left: 10px;
         }
 
-        .grid {
-            padding: 30px;
+        .produtos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
-        .card {
+        .item {
             background: #111;
-            padding: 18px;
-            border-radius: 14px;
-            transition: 0.3s;
-            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
-        .card:hover {
-            transform: scale(1.03);
-            border-color: var(--verde);
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ff6a;
         }
 
-        .card img {
-            width: 100%;
-            border-radius: 12px;
+        .item img {
+            width: 180px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
         }
 
-        .card h3 {
-            margin: 15px 0 5px;
-            font-weight: 800;
-        }
-
-        .price {
-            color: var(--verde);
-            font-weight: 900;
-            font-size: 20px;
+        .item:hover img {
+            transform: rotate(2deg) scale(1.1);
         }
 
         footer {
-            background: var(--cinza-escuro);
-            padding: 40px;
+            margin-top: 50px;
+            background: #000;
+            padding: 20px;
             text-align: center;
-            margin-top: 40px;
-            border-top: 2px solid var(--verde);
+            border-top: 2px solid #00ff6a;
         }
-
-        footer p {
-            margin-top: 8px;
-            opacity: 0.8;
+    
+        /* Efeito de clareamento profissional */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: brightness(1.2);
         }
 
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>NexarStore</h1>
-        <nav>
-            <a href="#produtos">Produtos</a>
-            <a href="#categorias">Categorias</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h2>Sua Loja Premium de Tecnologia</h2>
-        <p>Aparelhos originais, preços acessíveis e confiança total.</p>
-        <a href="#produtos" class="btn">Ver Produtos</a>
-    </section>
+<header>
+    <h1>Nexar Tech - Sua Loja Premium de Tecnologia</h1>
+</header>
 
-    <h2 class="section-title" id="produtos">Produtos em Destaque</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="produto1.jpg" alt="iPhone 16 Pro Max">
+<div class="hero">
+    <img src="https://i.imgur.com/7yQ0X0G.png" alt="iPhone Última Geração" />
+</div>
+
+<div class="container">
+    <h2>Catálogo Premium</h2>
+    <div class="produtos">
+
+        <!-- iPhone 16 Pro Max -->
+        <div class="item" onclick="abrir('iphone')">
+            <img src="https://i.imgur.com/5E3Z0G1.jpeg" alt="iPhone 16 Pro Max" />
             <h3>iPhone 16 Pro Max</h3>
-            <p class="price">R$ 10.000</p>
+            <p>O mais avançado da Apple.</p>
         </div>
-        <div class="card">
-            <img src="produto2.jpg" alt="Samsung S25">
-            <h3>Samsung S25</h3>
-            <p class="price">R$ 8.000</p>
-        </div>
-        <div class="card">
-            <img src="produto3.jpg" alt="ASUS Vivobook">
-            <h3>ASUS Vivobook</h3>
-            <p class="price">R$ 4.000</p>
-        </div>
-    </div>
 
-    <footer id="contato">
-        <h3>Contato</h3>
-        <p><strong>Whatsapp:</strong> +55 11 97042-0650</p>
-        <p><strong>Email:</strong> nexarstore@gmail.com</p>
-    </footer>
+        <!-- Samsung S25 -->
+        <div class="item" onclick="abrir('s25')">
+            <img src="https://i.imgur.com/Uf9i0yc.jpeg" alt="Samsung S25" />
+            <h3>Samsung S25</h3>
+            <p>Poder e inovação Samsung.</p>
+        </div>
+
+        <!-- Asus VivoBook -->
+        <div class="item" onclick="abrir('asus')">
+            <img src="https://i.imgur.com/ilCdlm4.jpeg" alt="Asus VivoBook" />
+            <h3>Asus VivoBook</h3>
+            <p>Notebook leve, rápido e eficiente.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>Contato: (11) 97042-0650</p>
+</footer>
+
+<script>
+function abrir(produto) {
+    let imagens = {
+        iphone: "https://i.imgur.com/5E3Z0G1.jpeg",
+        s25: "https://i.imgur.com/Uf9i0yc.jpeg",
+        asus: "https://i.imgur.com/ilCdlm4.jpeg"
+    };
+
+    let janela = window.open("", "popup", "width=500,height=600");
+    janela.document.write(`
+        <html>
+        <head>
+            <title>Produto</title>
+            <style>
+                body { background:#000; color:#fff; text-align:center; font-family:Arial; }
+                img { width:80%; margin-top:20px; border-radius:10px; }
+            </style>
+        </head>
+        <body>
+            <h2>Visualização do Produto</h2>
+            <img src="${imagens[produto]}" />
+            <p>Produto Premium Nexar Tech</p>
+        </body>
+        </html>
+    `);
+}
+</script>
+
 </body>
 </html>
