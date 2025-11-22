@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="s25g" src="https://github.com/user-attachments/assets/298edd65-4d0f-4e29-bf60-4333d66fe4ba" />
-<img width="1024" height="1536" alt="iphone16" src="https://github.com/user-attachments/assets/8529dc58-ff3d-48c9-a14e-8bb40e6b7e67" />
-<img width="1536" height="1024" alt="galaxy s25" src="https://github.com/user-attachments/assets/019c5735-4525-4bb7-9eb7-ef20ad5e95ba" />
-<img width="1536" height="1024" alt="galaxy s25f" src="https://github.com/user-attachments/assets/71e0b783-5953-40f8-a6f5-2d428435d80b" />
+<img width="1536" height="1024" alt="galaxy s25" src="https://github.com/user-attachments/assets/ada836a4-b597-42b6-9324-2e3836cd5628" />
+![<img width="1536" height="1024" alt="galaxy s25f" src="https://github.com/user-attachments/assets/c56361fd-563a-4ca1-95ef-3de2e0534596" />
+Uploading galaxy s25.png…]()
+<img width="1536" height="1024" alt="s25g" src="https://github.com/user-attachments/assets/a94957e9-2fe1-42c3-b390-ff7468099c91" />
+<img width="1024" height="1536" alt="iphone16" src="https://github.com/user-attachments/assets/da540540-3681-458f-ab3c-1b4041d2a3be" />
