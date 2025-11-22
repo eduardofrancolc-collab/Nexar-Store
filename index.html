@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexarStore — Tecnologia Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         :root {
@@ -18,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* Padrão para corpo */
         }
 
         body {
@@ -40,6 +41,13 @@
             font-weight: 900;
             color: var(--verde);
             letter-spacing: 1px;
+            /* MONTSERRAT para o Logo */
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
@@ -53,6 +61,18 @@
         nav a:hover {
             color: var(--verde);
         }
+        
+        .cart-icon {
+            font-size: 20px;
+            margin-left: 30px;
+            cursor: pointer;
+            color: var(--branco);
+            transition: 0.3s;
+        }
+
+        .cart-icon:hover {
+            color: var(--verde);
+        }
 
         /* HERO COM IMAGEM DO GITHUB RAW */
         .hero {
@@ -60,12 +80,15 @@
             background-size: cover;
             background-position: center;
             text-align: center;
-            padding: 80px 20px;
+            /* AJUSTE: Padding reduzido para compactar o banner */
+            padding: 50px 20px; 
         }
 
         .hero h2 {
             font-size: 38px;
             font-weight: 800;
+            /* MONTSERRAT para o Título do Hero */
+            font-family: 'Montserrat', sans-serif; 
         }
 
         .hero p {
@@ -91,6 +114,8 @@
             font-size: 32px;
             font-weight: 800;
             color: var(--verde);
+            /* MONTSERRAT para o Título de Seção */
+            font-family: 'Montserrat', sans-serif;
         }
 
         .grid {
@@ -129,17 +154,73 @@
             font-size: 20px;
         }
 
+        /* Novo estilo para o Rodapé Estendido e PIX */
+        .footer-extended {
+            background: var(--preto);
+            color: var(--branco);
+            padding: 40px 40px 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-block {
+            max-width: 300px;
+        }
+
+        .footer-block h3 {
+            color: var(--verde);
+            margin-bottom: 15px;
+            font-weight: 900;
+            font-size: 22px;
+        }
+
+        .pix-area {
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid var(--verde);
+        }
+
+        .pix-code {
+            font-size: 12px;
+            word-break: break-all;
+            margin-top: 5px;
+            opacity: 0.7;
+        }
+
+        .pix-copy-btn {
+            background: var(--verde);
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .pix-copy-btn:hover {
+            background: #00e08c;
+        }
+
         footer {
             background: var(--cinza-escuro);
-            padding: 40px;
+            padding: 20px;
             text-align: center;
-            margin-top: 40px;
             border-top: 2px solid var(--verde);
         }
 
         footer p {
             margin-top: 8px;
             opacity: 0.8;
+            font-size: 14px;
         }
 
     </style>
@@ -153,6 +234,7 @@
             <a href="#categorias">Categorias</a>
             <a href="#catalogo">Catálogo</a>
             <a href="#contato">Contato</a>
+            <i class="fa-solid fa-cart-shopping cart-icon" title="Carrinho de Compras"></i>
         </nav>
     </header>
 
@@ -181,10 +263,40 @@
         </div>
     </div>
 
-    <footer id="contato">
-        <h3>Contato</h3>
-        <p><strong>Whatsapp:</strong> +55 11 97042-0650</p>
-        <p><strong>Email:</strong> nexarstore@gmail.com</p>
+    <section class="footer-extended">
+        <div class="footer-block" id="contato">
+            <h3>Contato</h3>
+            <p><strong>Whatsapp:</strong> +55 11 97042-0650</p>
+            <p><strong>Email:</strong> nexarstore@gmail.com</p>
+        </div>
+
+        <div class="footer-block">
+            <h3>Formas de Pagamento</h3>
+            <p>Aceitamos as seguintes formas de pagamento:</p>
+            <ul>
+                <li>PIX (Entrega Imediata)</li>
+                <li>Cartão de Crédito (Via Mercado Pago)</li>
+                <li>Boleto Bancário (Via PagSeguro)</li>
+            </ul>
+        </div>
+
+        <div class="footer-block">
+            <h3>PIX para Pagamento</h3>
+            <p>Chave PIX: **959ef5f1-680c-4ca9-8260-724aaa1de1fd**</p>
+            <div class="pix-area">
+                <p>Copia e Cola do PIX (QR Code Estático)</p>
+                <div class="pix-code" id="pix-code">
+                    00020126720014br.gov.bcb.pix0136959ef5f1-680c-4ca9-8260-724aaa1de1fd0210NexarStore5204000053039865802BR5925EDUARDO FRANCO LIMA DE CA6007ITAPEVI62200516NexarStoreAccont630466F6
+                </div>
+                <button class="pix-copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('pix-code').innerText)">
+                    Copiar Código PIX
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NexarStore. Todos os direitos reservados. | Desenvolvido por Eduardo</p>
     </footer>
 </body>
-</html> 
+</html>
