@@ -125,11 +125,12 @@
             align-items: center;
         }
 
-        /* Estilo para a Imagem da Logo */
+        /* --- LOGO ATUALIZADA (TAMANHO MAIOR) --- */
         .logo-img {
-            height: 50px;
+            height: 90px; /* Aumentado para 90px (Desktop) */
             width: auto;
             display: block;
+            transition: 0.3s;
         }
 
         .nav-links {
@@ -294,14 +295,13 @@
             margin: 0 auto 20px;
         }
 
-        /* --- GALERIA (MODIFICADO) --- */
+        /* --- GALERIA (PLACEHOLDER) --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
         }
 
-        /* Estilo atualizado para o placeholder de texto */
         .gallery-item {
             height: 250px;
             background-color: #141414;
@@ -309,7 +309,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px dashed #333; /* Borda tracejada estilo "espaço vazio" */
+            border: 2px dashed #333;
             color: #666;
             font-weight: 800;
             font-family: var(--font-head);
@@ -379,7 +379,8 @@
             .hero-content h1 { font-size: 2.5rem; }
             .hero-buttons { flex-direction: column; }
             .form-grid { grid-template-columns: 1fr; }
-            .logo-img { height: 40px; }
+            /* LOGO NO MOBILE (TAMANHO MAIOR QUE O ANTERIOR) */
+            .logo-img { height: 60px; } /* Aumentado para 60px (Mobile) */
         }
     </style>
 </head>
@@ -631,7 +632,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <img src="logo-garage01.png" alt="GARAGE 01 Logo" class="logo-img" style="height: 40px;">
+                    <img src="logo-garage01.png" alt="GARAGE 01 Logo" class="logo-img" style="height: 60px;">
                     <p style="margin-top:20px;">Especialistas em transformar seu carro. Padrão premium de qualidade e atendimento.</p>
                 </div>
                 <div class="footer-info">
